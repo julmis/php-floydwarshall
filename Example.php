@@ -68,3 +68,11 @@ function printPredecessors(FloydWarshall $floydwarshall) {
 
 printDistances($floydwarshall);
 printPredecessors($floydwarshall);
+
+// Get shortest path from a to c
+$shortestPath = $floydwarshall->getPath(0, 2);
+
+print("Shortest path from a to c is: ");
+foreach ($shortestPath as $value) {
+    printf("%s ", $nodenames[$value]);
+}
